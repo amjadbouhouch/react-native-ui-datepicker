@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.3](https://github.com/amjadbouhouch/react-native-ui-datepicker/compare/v2.1.2...v2.1.3) (2024-07-29)
+
+
+### Bug Fixes
+
+* handle disabled when there is a minDate ([1154d42](https://github.com/amjadbouhouch/react-native-ui-datepicker/commit/1154d42b2b48a7b6ff887b331630c113ffbd8139))
+
 ### [2.1.1](https://github.com/amjadbouhouch/react-native-ui-datepicker/compare/v2.1.0...v2.1.1) (2024-07-29)
 
 ## 2.1.0 (2024-07-29)

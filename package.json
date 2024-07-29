@@ -1,6 +1,6 @@
 {
   "name": "react-native-ui-datepicker-custom-v2",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Customizable date picker for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
