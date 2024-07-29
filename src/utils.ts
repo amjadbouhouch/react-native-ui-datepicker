@@ -234,10 +234,13 @@ const generateDayObject = (
   maxDate: DateType,
   isCurrentMonth: boolean,
   dayOfMonth: number,
-  isDateDisabled?: IsDateDisabled,
+  isDateDisabled?: IsDateDisabled
 ) => {
-  let disabled = typeof isDateDisabled === "function" ? isDateDisabled(date.toDate()) : false;
-  if (minDate) {
+  let disabled =
+    typeof isDateDisabled === 'function'
+      ? isDateDisabled(date.toDate())
+      : false;
+  if (minDate && !disabled) {
     disabled = date < getDate(minDate);
   }
   if (maxDate && !disabled) {
