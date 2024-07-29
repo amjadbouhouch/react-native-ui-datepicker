@@ -1,5 +1,5 @@
 {
-  "name": "react-native-ui-datepicker",
+  "name": "react-native-ui-datepicker-custom",
   "version": "2.1.0",
   "description": "Customizable date picker for React Native",
   "main": "lib/commonjs/index",
@@ -31,7 +31,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "prepack": "bob build",
-    "release": "standard-version",
+    "release": "release-it",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn install"
   },
@@ -57,15 +57,16 @@
     "calendar",
     "daterange"
   ],
-  "repository": "https://github.com/farhoudshapouran/react-native-ui-datepicker",
-  "author": "Farhoud Shapouran <shapouran@gmail.com> (https://github.com/farhoudshapouran)",
+  "repository": "https://github.com/amjadbouhouch/react-native-ui-datepicker",
+  "author": "Amjed Bouhouch <amjedbouhouch@gmail.com> (https://github.com/amjadbouhouch)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/farhoudshapouran/react-native-ui-datepicker/issues"
+    "url": "https://github.com/amjadbouhouch/react-native-ui-datepicker/issues"
   },
-  "homepage": "https://github.com/farhoudshapouran/react-native-ui-datepicker#readme",
+  "homepage": "https://github.com/amjadbouhouch/react-native-ui-datepicker#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
