@@ -4,6 +4,7 @@ import type {
   DateType,
   DatePickerBaseProps,
   CalendarThemeProps,
+  IsDateDisabled,
 } from './types';
 
 export interface CalendarContextType extends DatePickerBaseProps {
@@ -20,6 +21,7 @@ export interface CalendarContextType extends DatePickerBaseProps {
   onSelectYear: (year: number) => void;
   onChangeMonth: (value: number) => void;
   onChangeYear: (value: number) => void;
+  isDateDisabled?: IsDateDisabled;
 }
 
 const CalendarContext = createContext({} as CalendarContextType);

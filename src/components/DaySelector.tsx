@@ -29,6 +29,7 @@ const DaySelector = () => {
     firstDayOfWeek,
     theme,
     height,
+    isDateDisabled,
   } = useCalendarContext();
 
   const { year, month, hour, minute } = getParsedDate(currentDate);
@@ -48,7 +49,8 @@ const DaySelector = () => {
         displayFullDays,
         minDate,
         maxDate,
-        firstDayOfWeek
+        firstDayOfWeek,
+        isDateDisabled
       ).map((day, index) => {
         if (day) {
           let leftCrop = day.dayOfMonth === 1;
@@ -160,6 +162,7 @@ const DaySelector = () => {
       startDate,
       endDate,
       dates,
+      isDateDisabled,
     ]
   );
 

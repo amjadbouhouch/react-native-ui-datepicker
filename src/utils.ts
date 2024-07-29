@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import type { DateType, IDayObject } from './types';
+import type { DateType, IDayObject, IsDateDisabled } from './types';
 
 export const CALENDAR_FORMAT = 'YYYY-MM-DD HH:mm';
 export const DATE_FORMAT = 'YYYY-MM-DD';
@@ -158,7 +158,8 @@ export const getMonthDays = (
   displayFullDays: boolean,
   minDate: DateType,
   maxDate: DateType,
-  firstDayOfWeek: number
+  firstDayOfWeek: number,
+  isDateDisabled?: IsDateDisabled
 ): IDayObject[] => {
   const date = getDate(datetime);
   const {
@@ -178,7 +179,8 @@ export const getMonthDays = (
           minDate,
           maxDate,
           false,
-          index + 1
+          index + 1,
+          isDateDisabled
         );
       })
     : Array(prevMonthOffset).fill(null);
@@ -192,7 +194,8 @@ export const getMonthDays = (
       minDate,
       maxDate,
       true,
-      prevMonthOffset + day
+      prevMonthOffset + day,
+      isDateDisabled
     );
   });
 
@@ -205,7 +208,8 @@ export const getMonthDays = (
       minDate,
       maxDate,
       false,
-      daysInCurrentMonth + prevMonthOffset + day
+      daysInCurrentMonth + prevMonthOffset + day,
+      isDateDisabled
     );
   });
 
@@ -229,9 +233,10 @@ const generateDayObject = (
   minDate: DateType,
   maxDate: DateType,
   isCurrentMonth: boolean,
-  dayOfMonth: number
+  dayOfMonth: number,
+  isDateDisabled?: IsDateDisabled,
 ) => {
-  let disabled = false;
+  let disabled = typeof isDateDisabled === "function" ? isDateDisabled(date.toDate()) : false;
   if (minDate) {
     disabled = date < getDate(minDate);
   }

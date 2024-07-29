@@ -67,7 +67,7 @@ export interface IDayObject {
 }
 
 export type SingleChange = (params: { date: DateType }) => void;
-
+export type IsDateDisabled = (date: Date) => boolean;
 export type RangeChange = (params: {
   startDate: DateType;
   endDate: DateType;
@@ -94,6 +94,7 @@ export interface DatePickerBaseProps {
   startDate?: DateType;
   endDate?: DateType;
   onChange?: SingleChange | RangeChange | MultiChange;
+  isDateDisabled?: IsDateDisabled; 
   initialView?: CalendarViews;
   height?: number;
 }
