@@ -1,6 +1,6 @@
 {
   "name": "react-native-ui-datepicker-custom",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Customizable date picker for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -31,7 +31,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "prepack": "bob build",
-    "release": "release-it",
+    "release": "standard-version",
     "example": "yarn --cwd example",
     "bootstrap": "yarn example && yarn install"
   },
